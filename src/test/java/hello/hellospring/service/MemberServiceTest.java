@@ -2,25 +2,22 @@ package hello.hellospring.service;
 
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemoryMemberRepository;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MemberServiceTest {
 
-    MemberService memberService;
+    MemberService2 memberService;
     MemoryMemberRepository memberRepository;
 
     @BeforeEach // 같은 memoryrepository 사용을 위한 dependency injection
     public void beforeEach() {
         memberRepository = new MemoryMemberRepository();
-        memberService = new MemberService(memberRepository);
+        memberService = new MemberService2(memberRepository);
     }
     @AfterEach  // 콜백 메서드로 지정
     public void afterEach() {

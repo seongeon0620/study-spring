@@ -1,7 +1,7 @@
 package hello.hellospring.controller;
 
 import hello.hellospring.domain.Member;
-import hello.hellospring.service.MemberService;
+import hello.hellospring.service.MemberService2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,10 +12,10 @@ import java.util.List;
 
 @Controller
 public class MemberController {
-    private final MemberService memberService;
+    private final MemberService2 memberService;
 
     @Autowired
-    public MemberController(MemberService memberService) {
+    public MemberController(MemberService2 memberService) {
         this.memberService = memberService;
     }
 

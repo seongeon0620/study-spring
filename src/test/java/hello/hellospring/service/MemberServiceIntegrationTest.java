@@ -16,7 +16,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 // @Transactional : @Test  어노테이션이 붙어있는 테스트를 수행하고나서 db에 올리지않고 롤백함
 class MemberServiceIntegrationTest {
 
-    @Autowired MemberService memberService;
+    @Autowired
+    MemberService2 memberService;
     @Autowired MemberRepository memberRepository;
 
     @Test
